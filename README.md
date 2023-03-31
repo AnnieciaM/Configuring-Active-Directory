@@ -68,15 +68,19 @@ STEP 4
 Now we are ready to install activate directory by accessing add roles and features in server manager.Once you are in, click next until you get to server roles and click active directory domain services. It will begin to install. When it does open it and set the domain to mydomain.com under add a new forest then create a password. Now you can log out and back into DC-1 by using the username mydomain.com/azureuser.
 </p>
 <br />
-
+STEP 5
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/za8gnyC.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/T8oxngA.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/ppVHx8s.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/p3jhnbj.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/J5inTCO.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Go back to the server manager, tools and scroll down to Active Directory Users and Computers. Then right click on mydomain.com, scroll  down to new and over to organizational unit. Here is where we are going to create admin and normal users (_admin & _employees). Once that is created we are going to click on Admin and create a new employee named Jane Doe with the same password. We are also going to add Jane to the security group my clicking on her name, members and adding her to the domain admin group. Now we can log out of mydomain.com\azureuser and log back in to DC-1 as mydomain.com\jane_admin. Jane is now an admin and when we check on the cmmd line we will be able to see Jane_admin as user.
 </p>
 <br />
-
+STEP 6
 <p>
 <img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
