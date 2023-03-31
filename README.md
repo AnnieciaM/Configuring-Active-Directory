@@ -42,7 +42,7 @@ STEP 1
 Created a DC-1 (Domain Controller)(Windows Server 2022) and Client-1 VM (Windows 10)in Microsoft Azure using the same Vnet of DC-1. Then when back into DC-1 to change the Domain Controller's Nic Private IP address to be static. To do this first click on DC-1, networking, networking interface (NIC), Ipconfiguration then you will be able to change it to static (which means that the IP-address is not going to change even if you turn off your computer for a long time). 
 </p>
 <br />
-STEP 2
+STEP 2 & 3
 <p>
 <img src="https://i.imgur.com/k8aeJt5.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <img src="https://i.imgur.com/u8G4lSD.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
@@ -56,12 +56,16 @@ STEP 2
 First open the client-1 in VM and copy the IP address (172.174.115.71). Paste it in the Microsoft Remote Desktop and login with the same username and password that was used when creating VM. Once your in open cmmd prompt by typing it in the bottom of the screen. It will open and we will try to ping DC-1's private IP address (10.0.0.4)- (ping -t 10.0.0.4)but it is not going to work (request timeout because DC-1 firewall is blocking ICMP traffic). To correct this we must login into DC-1 (IP address 4.236.152.132) and type wf.msc and go to inbound roles, protocol, ICMP. Then scroll down and enable 2 core networking diagnostics echo- ICMPv4. This will allow the continuous ping from Client-1s VM (172.174.115.71) to DC-1s VM. To stop the ping in Client-1 press Control C.
 </p>
 <br />
-
+STEP 4
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/SXQGAew.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/eOJUovp.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/sYuzmWM.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/SNS6JfR.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/4xQ9pOf.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Now we are ready to install activate directory by accessing add roles and features in server manager.Once you are in, click next until you get to server roles and click active directory domain services. It will begin to install. When it does open it and set the domain to mydomain.com under add a new forest then create a password. Now you can log out and back into DC-1 by using the username mydomain.com/azureuser.
 </p>
 <br />
 
