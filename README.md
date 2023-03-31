@@ -104,10 +104,15 @@ Just to check who has access to domain we are also going to login to DC-1, activ
 <br />
 STEP 8
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/ADTcVRW.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/ZwMPNzp.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/BRHAD2S.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/pkSBGPo.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/RBfAdmk.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/hF4Gl4y.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Go back to DC-1 and make sure you are logged in as jane_admin. Then open powershell_ise as an administrator and copy/paste the script given by course careers.Click run script and 1000 accounts with the same password are now created inside of EMPLOYEES. Now you can log into Client-1 with any account from employees. Then login using bad.heda account and type cmmd. Click on Command prompt and right hostname. This will show you that bad.heda is now logged in to Client-1s VM.
 </p>
 <br />
 
